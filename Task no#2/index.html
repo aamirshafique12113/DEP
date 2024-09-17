@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Commerce Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="TheShoppingHub Logo" class="logo">
+            <h1>TheShoppingHub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#slider">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ 
+    <section id="slider">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="daniel-l-3T2HhfFwEog-unsplash.jpg" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="sumup-o8Dx1aw297I-unsplash.jpg" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="large-grey-sofa-by-brick-wall.jpg" alt="Slide 3">
+                </div>
+                <a class="prev" onclick="prevSlide()">&#10094;</a>
+                <a class="next" onclick="nextSlide()">&#10095;</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="products">
+        <div class="product">
+            <img src="gold-zipper-on-black-fashion-backpack.jpg" alt="Product 1" class="product-image">
+            <h2>Backpack</h2>
+            <p class="description">Gold zipper on black fashion backpack</p>
+            <p class="price">$19.99</p>
+            <button onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
+            <button onclick="openModal('modal1')">More Info</button>
+        </div>
+        <div class="product">
+            <img src="large-grey-sofa-by-brick-wall.jpg" alt="Product 2" class="product-image">
+            <h2>Sofa</h2>
+            <p class="description">Large grey sofa by brick wall</p>
+            <p class="price">$29.99</p>
+            <button onclick="addToCart('Product 2', 29.99)">Add to Cart</button>
+            <button onclick="openModal('modal2')">More Info</button>
+        </div>
+        <div class="product">
+            <img src="wrist-watches.jpg" alt="Product 3" class="product-image">
+            <h2>Watches</h2>
+            <p class="description">Wrist watches</p>
+            <p class="price">$10.99</p>
+            <button onclick="addToCart('Product 3', 10.99)">Add to Cart</button>
+            <button onclick="openModal('modal3')">More Info</button>
+        </div>
+    </section>
+    
+   
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <p>Buying guide for Product 1: This backpack features a sleek black design with a gold zipper, perfect for work, school, and travel.</p>
+        </div>
+    </div>
+    
+    
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <p>Buying guide for Product 2: A stylish and comfortable grey sofa that complements any living space.</p>
+        </div>
+    </div>
+    
+  
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <p>Buying guide for Product 3: Elegant wristwatches designed for both functionality and fashion.</p>
+        </div>
+    </div>
+    
+    </div>
+   
+    <section id="accordion-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <button class="accordion">What payment methods are accepted?</button>
+        <div class="panel">
+            <p>We accept Visa, MasterCard, American Express, PayPal, and bank transfers.</p>
+        </div>
+
+        <button class="accordion">What is your return policy?</button>
+        <div class="panel">
+            <p>We have a 30-day return policy, meaning you can return products within 30 days of purchase.</p>
+        </div>
+
+        <button class="accordion">Do you offer international shipping?</button>
+        <div class="panel">
+            <p>Yes, we ship worldwide. Shipping rates and delivery times vary based on location.</p>
+        </div>
+    </section>
+    
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
