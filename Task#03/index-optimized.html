@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Website - Before Optimization</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    <title>Sample Website - After Optimization</title>
+    <link rel="stylesheet" href="styles.min.css"> <!-- Minified CSS -->
+    <script defer src="scripts.min.js"></script> <!-- Defer loading of JS -->
 </head>
 <body>
     <header>
@@ -23,7 +23,7 @@
         <section id="home">
             <h2>Home</h2>
             <p>This is a sample website to demonstrate Lighthouse testing.</p>
-            <img src="images.jpeg" alt="A large image" />
+            <img src="images.jpeg" alt="A large image" loading="lazy" /> <!-- Optimized image format -->
         </section>
 
         <section id="about">
@@ -34,10 +34,10 @@
         <section id="contact">
             <h2>Contact</h2>
             <form>
-                <label>Name:</label>
-                <input type="text" required />
-                <label>Email:</label>
-                <input type="email" required />
+                <label for="name">Name:</label>
+                <input type="text" id="name" required />
+                <label for="email">Email:</label>
+                <input type="email" id="email" required />
                 <button type="submit">Submit</button>
             </form>
         </section>

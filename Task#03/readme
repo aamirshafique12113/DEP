@@ -1,0 +1,28 @@
+In Case of "Optimizing Web Performance"
+ "simply run website "
+  
+  Open Chrome DevTools (Right-click > Inspect or Ctrl+Shift+I).
+
+Go to the Lighthouse tab.
+
+Run audits on both the unoptimized and optimized versions of the site.
+
+Compare the scores for Performance, Accessibility, Best Practices, and SEO.
+
+Key Changes
+Images:
+
+Converted large images to WebP format and added loading="lazy".
+
+JavaScript:
+
+Deferred the loading of JavaScript to prevent blocking the rendering of the page.
+
+CSS:
+
+Used minified CSS to reduce file size.
+Accessibility:
+
+
+Added for attributes to labels for better accessibility.
+
